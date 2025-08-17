@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+# Stops the 4-to_infinity_and_beyond script if it is running
+
+# Find the PID(s) of the running script
+pid=$(pgrep -f "4-to_infinity_and_beyond")
+
+# Check if a PID was found
+if [ -n "$pid" ]; then
+    kill "$pid"
+fi
